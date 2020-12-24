@@ -1,4 +1,4 @@
-# Resume Builder  :)
+# Resume Builder 😃
 
 > Devlop your dream job resume
 
