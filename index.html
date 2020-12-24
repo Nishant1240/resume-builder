@@ -1,0 +1,1052 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1"
+      crossorigin="anonymous"
+    />
+
+    <link rel="stylesheet" href="css/style.css" />
+
+    <!-- fontawesome -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+    <title>Resume builder for your dream job</title>
+  </head>
+  <body>
+    <div id="main" class="vh-100">
+      <div class="container-fluid" id="header">
+        <div class="row text-center">
+          <div class="col p-0">
+            <a
+              href="#templates"
+              class="p-3 text-white text-decoration-none d-block w-100 primary"
+            >
+              <i class="fa fa-check-circle" aria-hidden="true"></i>
+              Select Template
+            </a>
+          </div>
+          <div class="col p-0">
+            <a
+              href="#about"
+              class="p-3 text-white text-decoration-none d-block w-100 secondary"
+            >
+              <i class="fa fa-info-circle" aria-hidden="true"></i>
+              About
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- templates -->
+      <div class="container-fluid" id="templates">
+        <!-- Resume level -->
+        <div class="container p-5 text-center">
+          <div class="row">
+            <div class="col">
+              <a
+                href="#"
+                class="check d-inline-block text-decoration-none text-white"
+              >
+                <i class="fa fa-check" aria-hidden="true"></i>
+              </a>
+            </div>
+            <div class="col">
+              <a
+                href="#"
+                class="edit d-inline-block text-decoration-none text-white"
+              >
+                <i class="fa fa-pencil" aria-hidden="true"></i>
+              </a>
+            </div>
+            <div class="col">
+              <a
+                href="#"
+                class="download d-inline-block text-decoration-none text-white last"
+              >
+                <i class="fa fa-download" aria-hidden="true"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="container" id="template-content">
+          <!-- Resume title -->
+          <div class="container text-center p-2" id="title">
+            <div class="row">
+              <div class="col-12">
+                <h1>Build a resume</h1>
+              </div>
+              <div class="col-12">
+                <h2>To get started, select a resume template below</h2>
+              </div>
+            </div>
+          </div>
+          <!-- Resume templates -->
+          <div class="container" id="templates__images">
+            <div class="row p-3">
+              <div class="col" data-id="1">
+                <div class="template__name p-3">
+                  <strong>Tranditional</strong>
+                  <sup class="text-light bg-success rounded px-1"
+                    >Available</sup
+                  >
+                </div>
+              </div>
+              <div class="col" data-id="2">
+                <div class="template__name p-3">
+                  <strong>Improved</strong>
+                  <sup class="text-light bg-success rounded px-1">Not at</sup>
+                </div>
+              </div>
+              <div class="col" data-id="3">
+                <div class="template__name p-3">
+                  <strong>Large</strong>
+                  <sup class="text-light bg-success rounded px-1">Not at</sup>
+                </div>
+              </div>
+              <div class="col" data-id="4">
+                <div class="template__name p-3">
+                  <strong>Modern Digital</strong>
+                  <sup class="text-light bg-success rounded px-1">Not at</sup>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="container p-3" id="edit">
+          <div class="container-fluid overflow-hidden">
+            <form class="d-flex flex-column w-50" style="margin: 0 auto">
+              <div class="row">
+                <div class="mb-3 col">
+                  <label for="firstname" class="form-label">First name</label>
+                  <input
+                    type="text"
+                    onchange="resumeDetails()"
+                    class="form-control"
+                    id="firstname"
+                    name="firstname"
+                  />
+                </div>
+                <div class="mb-3 col">
+                  <label for="lastname" class="form-label">Last name</label>
+                  <input
+                    type="text"
+                    onchange="resumeDetails()"
+                    class="form-control"
+                    id="lastname"
+                    name="lastname"
+                  />
+                </div>
+                <div class="mb-3 col">
+                  <label for="phone" class="form-label">Phone</label>
+                  <input
+                    type="text"
+                    onchange="resumeDetails()"
+                    class="form-control"
+                    id="phone"
+                    name="phone"
+                  />
+                </div>
+              </div>
+              <div class="mb-3">
+                <label for="email" class="form-label">Email address</label>
+                <input
+                  type="email"
+                  onchange="resumeDetails()"
+                  class="form-control"
+                  id="email"
+                  name="email"
+                />
+              </div>
+              <div class="mb-3">
+                <label for="address" class="form-label">Address</label>
+                <textarea
+                  onchange="resumeDetails()"
+                  id="address"
+                  cols="5"
+                  rows="3"
+                  class="form-control"
+                  name="address"
+                ></textarea>
+              </div>
+
+              <div class="mb-3">
+                <label for="objective" class="form-label">Objective</label>
+                <textarea
+                  onchange="resumeDetails()"
+                  id="objective"
+                  cols="5"
+                  rows="3"
+                  class="form-control"
+                  name="objective"
+                ></textarea>
+              </div>
+
+              <div class="row">
+                <div class="col">
+                  <div class="mb-3">
+                    <label for="workExpYear" class="form-label"
+                      >Experience(Year)</label
+                    >
+                    <input
+                      type="number"
+                      onchange="resumeDetails()"
+                      class="form-control"
+                      id="workExpYear"
+                      name="workExpYear"
+                    />
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="mb-3">
+                    <label for="workExpMonth" class="form-label"
+                      >Experience(Month)</label
+                    >
+                    <input
+                      type="number"
+                      onchange="resumeDetails()"
+                      class="form-control"
+                      id="workExpMonth"
+                      name="workExpMonth"
+                    />
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="mb-3">
+                    <label for="workDesc" class="form-label">Description</label>
+                    <textarea
+                      onchange="resumeDetails()"
+                      id="workDesc"
+                      cols="5"
+                      rows="3"
+                      class="form-control"
+                      name="workDesc"
+                    ></textarea>
+                  </div>
+                </div>
+              </div>
+              <!-- education -->
+
+              <div class="row">
+                <div class="col">
+                  <div class="mb-3">
+                    <label for="ssc" class="form-label">SSC(%)</label>
+                    <input
+                      type="number"
+                      onchange="resumeDetails()"
+                      class="form-control"
+                      id="ssc"
+                      name="ssc"
+                      max="100"
+                    />
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="mb-3">
+                    <label for="sscSchool" class="form-label"
+                      >10<sup>th</sup> School Name</label
+                    >
+                    <input
+                      type="text"
+                      onchange="resumeDetails()"
+                      class="form-control"
+                      id="sscSchool"
+                      name="sscSchool"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col">
+                  <div class="mb-3">
+                    <label for="hsc" class="form-label">HSC(%)</label>
+                    <input
+                      type="number"
+                      onchange="resumeDetails()"
+                      class="form-control"
+                      max="100"
+                      id="hsc"
+                      name="hsc"
+                    />
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="mb-3">
+                    <label for="hscSchool" class="form-label"
+                      >12<sup>th</sup> School Name</label
+                    >
+                    <input
+                      type="text"
+                      onchange="resumeDetails()"
+                      class="form-control"
+                      id="hscSchool"
+                      name="hscSchool"
+                    />
+                  </div>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col">
+                  <div class="mb-3">
+                    <label for="be" class="form-label">B.E(CGPA) - IT</label>
+                    <input
+                      type="number"
+                      onchange="resumeDetails()"
+                      class="form-control"
+                      max="100"
+                      id="be"
+                      name="be"
+                    />
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="mb-3">
+                    <label for="beColleage" class="form-label"
+                      >Colleage Name</label
+                    >
+                    <input
+                      type="text"
+                      onchange="resumeDetails()"
+                      class="form-control"
+                      id="beColleage"
+                      name="beColleage"
+                    />
+                  </div>
+                </div>
+              </div>
+
+              <div class="mb-3">
+                <label for="skills" class="form-label">Additional Skills</label>
+                <textarea
+                  onchange="resumeDetails()"
+                  id="skills"
+                  cols="5"
+                  rows="3"
+                  class="form-control"
+                  name="skills"
+                ></textarea>
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <div class="container p-3" id="download">
+          <form class="d-flex flex-column w-50" style="margin: 0 auto">
+            <div class="row">
+              <div class="mb-3 col">
+                <label for="firstname" class="form-label">First name</label>
+                <input
+                  type="text"
+                  onchange="resumeDetails()"
+                  class="form-control"
+                  disabled
+                  name="firstname"
+                />
+              </div>
+              <div class="mb-3 col">
+                <label for="lastname" class="form-label">Last name</label>
+                <input
+                  type="text"
+                  onchange="resumeDetails()"
+                  class="form-control"
+                  disabled
+                  name="lastname"
+                />
+              </div>
+              <div class="mb-3 col">
+                <label for="phone" class="form-label">Phone</label>
+                <input
+                  type="text"
+                  onchange="resumeDetails()"
+                  class="form-control"
+                  disabled
+                  name="phone"
+                />
+              </div>
+            </div>
+            <div class="mb-3">
+              <label for="email" class="form-label">Email address</label>
+              <input
+                type="email"
+                onchange="resumeDetails()"
+                class="form-control"
+                disabled
+                name="email"
+              />
+            </div>
+            <div class="mb-3">
+              <label for="address" class="form-label">Address</label>
+              <textarea
+                onchange="resumeDetails()"
+                disabled
+                cols="5"
+                rows="3"
+                class="form-control"
+                name="address"
+              ></textarea>
+            </div>
+
+            <div class="mb-3">
+              <label for="objective" class="form-label">Objective</label>
+              <textarea
+                onchange="resumeDetails()"
+                disabled
+                cols="5"
+                rows="3"
+                class="form-control"
+                name="objective"
+              ></textarea>
+            </div>
+
+            <div class="row">
+              <div class="col">
+                <div class="mb-3">
+                  <label for="workExpYear" class="form-label"
+                    >Experience(Year)</label
+                  >
+                  <input
+                    type="number"
+                    onchange="resumeDetails()"
+                    class="form-control"
+                    disabled
+                    name="workExpYear"
+                  />
+                </div>
+              </div>
+              <div class="col">
+                <div class="mb-3">
+                  <label for="workExpMonth" class="form-label"
+                    >Experience(Month)</label
+                  >
+                  <input
+                    type="number"
+                    onchange="resumeDetails()"
+                    class="form-control"
+                    disabled
+                    name="workExpMonth"
+                  />
+                </div>
+              </div>
+              <div class="col">
+                <div class="mb-3">
+                  <label for="workDesc" class="form-label">Description</label>
+                  <textarea
+                    onchange="resumeDetails()"
+                    disabled
+                    cols="5"
+                    rows="3"
+                    class="form-control"
+                    name="workDesc"
+                  ></textarea>
+                </div>
+              </div>
+            </div>
+            <!-- education -->
+
+            <div class="row">
+              <div class="col">
+                <div class="mb-3">
+                  <label for="ssc" class="form-label">SSC(%)</label>
+                  <input
+                    type="number"
+                    onchange="resumeDetails()"
+                    class="form-control"
+                    disabled
+                    name="ssc"
+                    max="100"
+                  />
+                </div>
+              </div>
+              <div class="col">
+                <div class="mb-3">
+                  <label for="sscSchool" class="form-label"
+                    >10<sup>th</sup> School Name</label
+                  >
+                  <input
+                    type="text"
+                    onchange="resumeDetails()"
+                    class="form-control"
+                    disabled
+                    name="sscSchool"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col">
+                <div class="mb-3">
+                  <label for="hsc" class="form-label">HSC(%)</label>
+                  <input
+                    type="number"
+                    onchange="resumeDetails()"
+                    class="form-control"
+                    max="100"
+                    disabled
+                    name="hsc"
+                  />
+                </div>
+              </div>
+              <div class="col">
+                <div class="mb-3">
+                  <label for="hscSchool" class="form-label"
+                    >12<sup>th</sup> School Name</label
+                  >
+                  <input
+                    type="text"
+                    onchange="resumeDetails()"
+                    class="form-control"
+                    disabled
+                    name="hscSchool"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col">
+                <div class="mb-3">
+                  <label for="be" class="form-label">B.E(CGPA) - IT</label>
+                  <input
+                    type="number"
+                    onchange="resumeDetails()"
+                    class="form-control"
+                    max="100"
+                    disabled
+                    name="be"
+                  />
+                </div>
+              </div>
+              <div class="col">
+                <div class="mb-3">
+                  <label for="beColleage" class="form-label"
+                    >Colleage Name</label
+                  >
+                  <input
+                    type="text"
+                    onchange="resumeDetails()"
+                    class="form-control"
+                    disabled
+                    name="beColleage"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <div class="mb-3">
+              <label for="skills" class="form-label">Additional Skills</label>
+              <textarea
+                onchange="resumeDetails()"
+                disabled
+                cols="5"
+                rows="3"
+                class="form-control"
+                name="skills"
+              ></textarea>
+            </div>
+            <div class="mb-3">
+              <button onclick="download()" class="btn primary text-white">
+                Download
+              </button>
+              <button
+                type="submit"
+                onclick="preview()"
+                class="btn secondary text-white"
+              >
+                Preview *
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <!-- about -->
+      <div class="container-fluid" id="about">
+        <div class="container p-5">
+          <div class="row text-center">
+            <div class="col">
+              <h3>Online resume builder</h3>
+              <h4>Build dream job resume</h4>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.5/jspdf.debug.js"></script>
+
+    <!-- Bootstrap Bundle with Popper -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Script code -->
+    <script>
+      let firstname = (lastname = phone = email = address = objective = workExpYear = workExpMonth = workDesc = ssc = sscSchool = hsc = hscSchool = be = beColleage = skills =
+        "");
+      var id = 0;
+
+      fetchDetails();
+      fetchTemplate(id);
+
+      // fetch template data
+      function fetchTemplate(fetchId) {
+        if (id == 1) {
+          $("#edit").fadeIn("slow");
+          $("#download").fadeIn("slow");
+        } else {
+          $("#edit").hide();
+          $("#download").hide();
+        }
+      }
+
+      // fetch resume details
+      function fetchDetails() {
+        $("[name=firstname]").attr(
+          "value",
+          `${
+            sessionStorage.getItem("firstname")
+              ? sessionStorage.getItem("firstname")
+              : ""
+          }`
+        );
+
+        $("[name=lastname]").attr(
+          "value",
+          `${
+            sessionStorage.getItem("lastname")
+              ? sessionStorage.getItem("lastname")
+              : ""
+          }`
+        );
+
+        $("[name=phone]").attr(
+          "value",
+          `${
+            sessionStorage.getItem("phone")
+              ? sessionStorage.getItem("phone")
+              : ""
+          }`
+        );
+
+        $("[name=email]").attr(
+          "value",
+          `${
+            sessionStorage.getItem("email")
+              ? sessionStorage.getItem("email")
+              : ""
+          }`
+        );
+
+        $("[name=address]").text(
+          `${
+            sessionStorage.getItem("address")
+              ? sessionStorage.getItem("address")
+              : ""
+          }`
+        );
+
+        $("[name=objective]").text(
+          `${
+            sessionStorage.getItem("objective")
+              ? sessionStorage.getItem("objective")
+              : ""
+          }`
+        );
+
+        $("[name=workExpYear]").attr(
+          "value",
+          `${
+            sessionStorage.getItem("workExpYear")
+              ? sessionStorage.getItem("workExpYear")
+              : ""
+          }`
+        );
+        $("[name=workExpMonth]").attr(
+          "value",
+          `${
+            sessionStorage.getItem("workExpMonth")
+              ? sessionStorage.getItem("workExpMonth")
+              : ""
+          }`
+        );
+        $("[name=workDesc]").text(
+          `${
+            sessionStorage.getItem("workDesc")
+              ? sessionStorage.getItem("workDesc")
+              : ""
+          }`
+        );
+        $("[name=ssc]").attr(
+          "value",
+          `${
+            sessionStorage.getItem("ssc") ? sessionStorage.getItem("ssc") : ""
+          }`
+        );
+        $("[name=sscSchool]").attr(
+          "value",
+          `${
+            sessionStorage.getItem("sscSchool")
+              ? sessionStorage.getItem("sscSchool")
+              : ""
+          }`
+        );
+        $("[name=hsc]").attr(
+          "value",
+          `${
+            sessionStorage.getItem("hsc") ? sessionStorage.getItem("hsc") : ""
+          }`
+        );
+        $("[name=hscSchool]").attr(
+          "value",
+          `${
+            sessionStorage.getItem("hscSchool")
+              ? sessionStorage.getItem("hscSchool")
+              : ""
+          }`
+        );
+        $("[name=be]").attr(
+          "value",
+          `${sessionStorage.getItem("be") ? sessionStorage.getItem("be") : ""}`
+        );
+        $("[name=beColleage]").attr(
+          "value",
+          `${
+            sessionStorage.getItem("beColleage")
+              ? sessionStorage.getItem("beColleage")
+              : ""
+          }`
+        );
+        $("[name=skills]").text(
+          `${
+            sessionStorage.getItem("skills")
+              ? sessionStorage.getItem("skills")
+              : ""
+          }`
+        );
+      }
+
+      function resumeDetails() {
+
+        firstname = $("#firstname").val();
+        lastname = $("#lastname").val();
+        phone = $("#phone").val();
+        email = $("#email").val();
+        address = $("#address").val();
+        objective = $("#objective").val();
+        workExpYear = $("#workExpYear").val();
+        workExpMonth = $("#workExpMonth").val();
+        workDesc = $("#workDesc").val();
+        ssc = $("#ssc").val();
+        sscSchool = $("#sscSchool").val();
+        hsc = $("#hsc").val();
+        hscSchool = $("#hscSchool").val();
+        be = $("#be").val();
+        beColleage = $("#beColleage").val();
+        skills = $("#skills").val();
+
+        // store resume details
+
+        sessionStorage.setItem("firstname", firstname);
+        sessionStorage.setItem("lastname", lastname);
+        sessionStorage.setItem("phone", phone);
+        sessionStorage.setItem("email", email);
+        sessionStorage.setItem("address", address);
+        sessionStorage.setItem("objective", objective);
+        sessionStorage.setItem("workExpYear", workExpYear);
+        sessionStorage.setItem("workExpMonth", workExpMonth);
+        sessionStorage.setItem("workDesc", workDesc);
+        sessionStorage.setItem("ssc", ssc);
+        sessionStorage.setItem("sscSchool", sscSchool);
+        sessionStorage.setItem("hsc", hsc);
+        sessionStorage.setItem("hscSchool", hscSchool);
+        sessionStorage.setItem("be", be);
+        sessionStorage.setItem("beColleage", beColleage);
+        sessionStorage.setItem("skills", skills);
+      }
+
+      $("#about").hide();
+      // $("#edit").hide();
+      // $("#download").hide();
+
+      $(".check").addClass("primary").children().css({ color: "#fff" });
+
+      $(function () {
+        $("#header").on("click", "a", function () {
+          if ($(this).attr("href") == "#templates") {
+            $("#about").hide();
+            $("#templates").fadeIn("slow");
+          }
+          if ($(this).attr("href") == "#about") {
+            $("#templates").hide();
+            $("#about").fadeIn("slow");
+          }
+        });
+        $(".check").on("click", function () {
+          $(this).parent().next().children().removeClass("level");
+          $(this)
+            .removeClass("level")
+            .parent()
+            .nextAll()
+            .children()
+            .removeClass("primary");
+
+          $(this).parent().nextAll().find("i").css({ color: "#ccc" });
+
+          $("#template-content").fadeIn("slow");
+          $("#edit").hide();
+          $("#download").hide();
+          $(this).addClass("primary");
+        });
+
+        $(".edit").on("click", function () {
+          $(this)
+            .removeClass("level")
+            .parent()
+            .next()
+            .children()
+            .removeClass("primary")
+            .children()
+            .css({ color: "#ccc" });
+          $(this).parent().prev().children().addClass("level");
+          $("#template-content").hide();
+
+          // $("#edit").fadeIn("slow");
+          fetchTemplate(id);
+          $("#download").hide();
+
+          $(this).addClass("primary");
+          $(this).children().css("color", "white");
+        });
+
+        $(".download").on("click", function () {
+          resumeDetails();
+          fetchDetails();
+          $("#template-content").hide();
+
+          // $("#download").fadeIn("slow");
+          fetchTemplate(id);
+          $("#edit").hide();
+          $(this)
+            .parent()
+            .prev()
+            .children()
+            .addClass("primary")
+            .children()
+            .css({ color: "#fff" });
+          $(this).parent().prevAll().children().addClass("level");
+          $(this).addClass("primary");
+          $(this).children().css("color", "white");
+        });
+
+        $("#templates__images").on("click", "div.col", function () {
+          id = $(this).data("id");
+          // fetchTemplate(id);
+          // sessionStorage.setItem("id", id);
+          $("#templates__images div.col").each(function (index, element) {
+            $(this).removeClass("select");
+          });
+          $(this).toggleClass("select");
+        });
+      });
+    </script>
+    
+
+    <!-- Pdf Script -->
+    <script>
+      var doc = "";
+      // preview
+      function preview() {
+        // default setting
+        doc = new jsPDF("p", "cm", "a4");
+
+        doc.setProperties({ title: "Preview" });
+
+        // header
+        doc.setFontSize(26);
+        doc.setFont("arial");
+        doc.setFontType("bold");
+
+        doc.text(`${firstname}`, 6.5, 3.8);
+        let nameWidth = doc.getTextWidth(`${firstname}`);
+
+        doc.setTextColor(128, 128, 128);
+        doc.text(`${lastname}`, 6.5 + (Math.round(nameWidth) + 0.6), 3.8);
+
+        // lines
+        doc.setLineWidth(0.01);
+        doc.setDrawColor(178, 178, 178);
+        doc.line(1.1, 7.5, 20, 7.5); // horizontal line
+        doc.line(1.1, 11.3, 20, 11.2); // horizontal line
+        doc.line(1.1, 15.5, 20, 15.5); // horizontal line
+        doc.line(1.1, 22, 20, 22); // horizontal line
+
+        doc.setTextColor(0, 0, 0);
+
+        // draw pdf border
+        doc.setLineWidth(1.1);
+        doc.setDrawColor(178, 178, 178);
+        doc.rect(0, 0, 21, 29.7);
+
+        // questions
+        doc.setFontSize(11);
+
+        doc.text("Address: ", 4.5, 5);
+        doc.text("Phone: ", 7.9, 5.5);
+        doc.text("Email: ", 7, 6.2);
+        doc.text("OBJECTIVE ", 1.2, 8.6);
+        doc.text("WORK EXPERIENCE ", 1.2, 12.5);
+        doc.text("EDUCATION ", 1.2, 16.6);
+        doc.text("SSC, ", 5.7, 16.48);
+        doc.text("HSC, ", 5.7, 17.4);
+        doc.text("Bachelor Degree of Information Technology, ", 5.7, 18.8);
+        doc.text("ADDITIONAL SKILLS", 1.2, 23.22);
+
+        // per(%)
+        doc.setFont("verdana");
+        doc.setFontType("italic");
+        doc.text("Percentage: ", 15, 16.78);
+        doc.text("Percentage: ", 15, 18);
+        doc.text("CGPA: ", 15, 19.5);
+
+        // answers
+        doc.setFont("verdana");
+        doc.setFontType("normal");
+
+        doc.text(`${address}`, 6.3, 5);
+
+        doc.text(`${phone}`, 9.3, 5.5);
+        doc.text(`${email}`, 8.3, 6.2);
+
+        var splitObjective = doc.splitTextToSize(`${objective}`, 11);
+        doc.text(splitObjective, 5.7, 8.6);
+
+        var workSplitTitle = doc.splitTextToSize(
+          `My work experience ${workExpYear} Year and ${workExpMonth} Month. ${workDesc}`,
+          11
+        );
+
+        doc.text(workSplitTitle, 5.7, 12.4);
+
+        doc.text(`${sscSchool}`, 6.7, 16.5);
+        doc.text(`${ssc}`, 17.16, 16.8);
+
+        doc.text(`${hscSchool}`, 6.7, 17.4);
+        doc.text(`${hsc}`, 17.16, 18);
+
+        doc.text(`${beColleage}`, 5.7, 19.3);
+        doc.text(`${be}`, 16.3, 19.5);
+
+        var splitSkills = doc.splitTextToSize(`${skills}`, 11);
+        doc.text(splitSkills, 5.7, 23.22);
+
+        window.open(doc.output("bloburl", "_blank"));
+      }
+
+      // download
+      function download() {
+        // default setting
+        doc = new jsPDF("p", "cm", "a4");
+
+        doc.setProperties({ title: "Preview" });
+
+        // header
+        doc.setFontSize(26);
+        doc.setFont("arial");
+        doc.setFontType("bold");
+
+        doc.text(`${firstname}`, 6.5, 3.8);
+        let nameWidth = doc.getTextWidth(`${firstname}`);
+
+        doc.setTextColor(128, 128, 128);
+        doc.text(`${lastname}`, 6.5 + (Math.round(nameWidth) + 0.6), 3.8);
+
+        // lines
+        doc.setLineWidth(0.01);
+        doc.setDrawColor(178, 178, 178);
+        doc.line(1.1, 7.5, 20, 7.5); // horizontal line
+        doc.line(1.1, 11.3, 20, 11.2); // horizontal line
+        doc.line(1.1, 15.5, 20, 15.5); // horizontal line
+        doc.line(1.1, 22, 20, 22); // horizontal line
+
+        doc.setTextColor(0, 0, 0);
+
+        // draw pdf border
+        doc.setLineWidth(1.1);
+        doc.setDrawColor(178, 178, 178);
+        doc.rect(0, 0, 21, 29.7);
+
+        // questions
+        doc.setFontSize(11);
+
+        doc.text("Address: ", 4.5, 5);
+        doc.text("Phone: ", 7.9, 5.5);
+        doc.text("Email: ", 7, 6.2);
+        doc.text("OBJECTIVE ", 1.2, 8.6);
+        doc.text("WORK EXPERIENCE ", 1.2, 12.5);
+        doc.text("EDUCATION ", 1.2, 16.6);
+        doc.text("SSC, ", 5.7, 16.48);
+        doc.text("HSC, ", 5.7, 17.4);
+        doc.text("Bachelor Degree of Information Technology, ", 5.7, 18.8);
+        doc.text("ADDITIONAL SKILLS", 1.2, 23.22);
+
+        // per(%)
+        doc.setFont("verdana");
+        doc.setFontType("italic");
+        doc.text("Percentage: ", 15, 16.78);
+        doc.text("Percentage: ", 15, 18);
+        doc.text("CGPA: ", 15, 19.5);
+
+        // answers
+        doc.setFont("verdana");
+        doc.setFontType("normal");
+
+        doc.text(`${address}`, 6.3, 5);
+
+        doc.text(`${phone}`, 9.3, 5.5);
+        doc.text(`${email}`, 8.3, 6.2);
+
+        var splitObjective = doc.splitTextToSize(`${objective}`, 11);
+        doc.text(splitObjective, 5.7, 8.6);
+
+        var workSplitTitle = doc.splitTextToSize(
+          `My work experience ${workExpYear} Year and ${workExpMonth} Month. ${workDesc}`,
+          11
+        );
+
+        doc.text(workSplitTitle, 5.7, 12.4);
+
+        doc.text(`${sscSchool}`, 6.7, 16.5);
+        doc.text(`${ssc}`, 17.16, 16.8);
+
+        doc.text(`${hscSchool}`, 6.7, 17.4);
+        doc.text(`${hsc}`, 17.16, 18);
+
+        doc.text(`${beColleage}`, 5.7, 19.3);
+        doc.text(`${be}`, 16.3, 19.5);
+
+        var splitSkills = doc.splitTextToSize(`${skills}`, 11);
+        doc.text(splitSkills, 5.7, 23.22);
+
+        doc.save("Resume-builder.pdf");
+      }
+    </script>
+  </body>
+</html>
